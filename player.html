@@ -6,6 +6,8 @@
   <title>TiSPORTS | Live Player</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dashjs@latest"></script>
   <style>
     body {
       background-color: black;
@@ -45,14 +47,59 @@
     const { channel, videoUrl } = getQueryParams();
     document.getElementById('channelName').innerText = channel;
 
+    // Handle m3u8 (HLS), mpd (DASH), ts, and mp4 streams
     if (videoUrl) {
-      jwplayer("player").setup({
-        file: videoUrl,
-        width: "100%",
-        aspectratio: "16:9",
-        autostart: true,
-        controls: true
-      });
+      const playerContainer = document.getElementById("player");
+
+      if (videoUrl.includes(".m3u8")) {
+        // HLS stream
+        if (Hls.isSupported()) {
+          var hls = new Hls();
+          hls.loadSource(videoUrl);
+          hls.attachMedia(playerContainer);
+          hls.on(Hls.Events.MANIFEST_PARSED, function () {
+            playerContainer.play();
+          });
+        } else if (playerContainer.canPlayType("application/vnd.apple.mpegurl")) {
+          playerContainer.src = videoUrl;
+          playerContainer.addEventListener('loadedmetadata', function () {
+            playerContainer.play();
+          });
+        } else {
+          playerContainer.innerHTML = "<p class='text-red-500'>HLS is not supported by your browser.</p>";
+        }
+      } else if (videoUrl.includes(".mpd")) {
+        // DASH stream
+        var player = dashjs.MediaPlayer().create();
+        player.initialize(playerContainer, videoUrl, true);
+      } else if (videoUrl.includes(".ts")) {
+        // .ts file - Use HLS.js for .ts files as well
+        if (Hls.isSupported()) {
+          var hls = new Hls();
+          hls.loadSource(videoUrl);
+          hls.attachMedia(playerContainer);
+          hls.on(Hls.Events.MANIFEST_PARSED, function () {
+            playerContainer.play();
+          });
+        } else {
+          playerContainer.innerHTML = "<p class='text-red-500'>TS stream not supported by your browser.</p>";
+        }
+      } else if (videoUrl.includes(".mp4")) {
+        // mp4 file - Use HTML5 video player for mp4
+        playerContainer.innerHTML = `<video controls autoplay>
+                                        <source src="${videoUrl}" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                      </video>`;
+      } else {
+        // Default to JWPlayer for other types of video
+        jwplayer("player").setup({
+          file: videoUrl,
+          width: "100%",
+          aspectratio: "16:9",
+          autostart: true,
+          controls: true
+        });
+      }
     } else {
       document.getElementById("player").innerHTML = "<p class='text-red-500'>No video link available</p>";
     }
