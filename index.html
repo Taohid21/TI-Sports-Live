@@ -1,95 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toffee Live</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  </head>
-  <body class="bg-black text-white">
-    <header class="bg-purple-900 p-4 flex justify-between items-center">
-      <div class="flex items-center">
-        <img alt="Toffee logo" class="h-10" height="40" src="https://storage.googleapis.com/a1aa/image/yMm3otoFj739n4BCRCoB4b87h29tcKnMfX2osSX6mTM.jpg" width="40"/>
-        <span class="ml-2 text-xl font-bold">TOFFEE</span>
-      </div>
-      <div class="flex items-center">
-        <i class="fas fa-search text-white text-xl mr-4"></i>
-        <button class="bg-pink-500 text-white px-4 py-2 rounded-full">
-          लॉगिन
-        </button>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ti Sports | New Website</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-black text-white">
 
-    <main class="p-4">
-      <section class="text-center mb-4">
-        <h1 class="text-2xl font-bold">Live</h1>
-        <div class="flex justify-center mt-2">
-          <img alt="Live TV icon" class="h-10" height="40" src="https://storage.googleapis.com/a1aa/image/agSKSoOeMuXHkCdPBKjFAIzN1E6o7gbmyBYizLDKkOg.jpg" width="40"/>
-        </div>
-      </section>
+  <!-- Header Section -->
+  <header class="text-center py-4">
+    <h1 class="text-xl font-bold">TiSPORTS - WATCH FREE LIVE</h1>
+    <p class="text-gray-400">tisports.web</p>
+  </header>
 
-      <!-- Sports Channels Section -->
-      <section class="mb-8">
-        <h2 class="text-xl font-bold mb-4">Sports Channels</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          <a href="player.html?video=https://example.com/ipl2025.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/wou20bI_hJtgLCIkxAdnz6T-ZRkl2si4EpGWfEzrAL4.jpg" alt="IPL Live"/>
-          </a>
-          <a href="player.html?video=https://example.com/sonysports1.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/IAuLQ9AXbfw1O_n5D6g_96jYmXPGMLGLoiQY7atsor4.jpg" alt="Sony Sports 1 HD"/>
-          </a>
-          <a href="player.html?video=https://example.com/sonysports2.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/QpsNYyM9XRcEOps8hjUkrGWySe0JwH3Q4WsmBLZTRXk.jpg" alt="Sony Sports 2 HD"/>
-          </a>
-          <a href="player.html?video=https://example.com/sonysports5.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/_z9rtza_d4_3qJh39Q2zuLeG4VgfID_v8NUVWrvrl3c.jpg" alt="Sony Sports 5 HD"/>
-          </a>
-          <a href="player.html?video=https://example.com/eurosport.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/zyYeWe0c9Ha6-8B5zQuRQfiAL7BJE6LOE-fU0zAWDfE.jpg" alt="Eurosport"/>
-          </a>
-          <a href="player.html?video=https://example.com/tensports.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/JItf_b6FKv-6bhd4LhmwyFsdIQRzqcSqHMZQbhdnHlI.jpg" alt="Ten Sports"/>
-          </a>
-          <a href="player.html?video=https://example.com/iplhighlights.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/67mw3140pY2RajKLR9j0HHkhxdnsoZoV5xy4iY92lpQ.jpg" alt="IPL 2025 Highlights"/>
-          </a>
-          <a href="player.html?video=https://example.com/placeholder.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/HAFk626HVN6eDyhcrFhD96kWy4tCWcesw6SWoNGLslc.jpg" alt="Placeholder"/>
-          </a>
-        </div>
-      </section>
+  <!-- Banner Image -->
+  <section class="flex justify-center">
+    <img 
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAmh9q_L9fumB41QSLtEHPEMRYh14lnwAyqWYxgWdhPTwz_s2FDG0cfo4&s=10" 
+      alt="Banner" 
+      class="w-full max-w-md" 
+    />
+  </section>
 
-      <!-- Movie Channels Section -->
-      <section>
-        <h2 class="text-xl font-bold mb-4">Movie Channels</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          <a href="player.html?video=https://example.com/sonymaxhd.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/6MfZRrJrie7cprvbYd864TSnM-Us77rw97Vfb6NkCBY.jpg" alt="Sony Max HD"/>
-          </a>
-          <a href="player.html?video=https://example.com/sonymax.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/VyXGUf-5ujMY66EXV_ThEw7Oh5E0oDF6umF9dW_YfKU.jpg" alt="Sony Max"/>
-          </a>
-          <a href="player.html?video=https://example.com/sonypixhd.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/Pc1KVmzbTx5CtoChKh-T-0cZbT9-AGYjLqT_CxSCzRA.jpg" alt="Sony Pix HD"/>
-          </a>
-          <a href="player.html?video=https://example.com/b4umovies.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/EziaHdy6RiCN3g5gKJbKSNuReFPdKcDda6wi7nKMdTU.jpg" alt="B4U Movies"/>
-          </a>
-          <a href="player.html?video=https://example.com/sonymax2.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/auJDzNyTvq5yEOsnobXsApLQ--Q8wrH-SR1C58yuQ0s.jpg" alt="Sony Max 2"/>
-          </a>
-          <a href="player.html?video=https://example.com/zeecinema.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/q7UONlyAGROcs8qPhHjMJFs_QTu7NK3vBrtjZTFF4u4.jpg" alt="Zee Cinema"/>
-          </a>
-          <a href="player.html?video=https://example.com/zeecinemahd.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/JKPojcsbFc7T9dT75JVTxJtTA3xKfZNZZ8_P5Ch0JSk.jpg" alt="Zee Cinema HD"/>
-          </a>
-          <a href="player.html?video=https://example.com/andpictureshd.m3u8">
-            <img class="rounded-full w-24 mx-auto" src="https://storage.googleapis.com/a1aa/image/q7wUto2WKZuvNf6WgcIHd8rCDMlQnu7EQHShn760wPA.jpg" alt="&pictures HD"/>
-          </a>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+  <!-- All Channels Title -->
+  <section class="text-center py-4">
+    <h2 class="text-lg font-bold">ALL CHANNELS</h2>
+    <div class="w-16 h-1 bg-red-600 mx-auto mt-1"></div>
+  </section>
+
+  <!-- Live Sports Section -->
+  <section class="px-4 py-4">
+    <h3 class="text-lg font-bold">LIVE SPORTS</h3>
+    <div class="w-16 h-1 bg-red-600 mt-1 mb-4"></div>
+
+    <!-- Live Sports Channel Icons -->
+    <div class="flex justify-center space-x-4 flex-wrap">
+      <!-- IPL Live 1 -->
+      <a href="player.html?channel=IPL+LIVE+1&video=https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8">
+        <img 
+          src="https://fredflix.fun/assets/images/67e646657b0cb_20250328_124722.png" 
+          alt="IPL Live 1" 
+          class="rounded-full border-4 border-red-600 w-[100px]" 
+        />
+      </a>
+
+      <!-- IPL Live 2 -->
+      <a href="player.html?channel=IPL+LIVE+2&video=https://starshare.me:443/live/65555458/69826654/9027.ts">
+        <img 
+          src="https://fredflix.fun/assets/images/67e91f1da0c66_20250328_124635.png" 
+          alt="IPL Live 2" 
+          class="rounded-full border-4 border-red-600 w-[100px]" 
+        />
+      </a>
+
+      <!-- T Sports -->
+      <a href="player.html?channel=T+Sports&video=https://example.com/tsports.m3u8">
+        <img 
+          src="https://fredflix.fun/assets/images/67e4f7177c115_T%20Sports%20HD1731514435.png" 
+          alt="T Sports" 
+          class="rounded-full border-4 border-red-600 w-[100px]" 
+        />
+      </a>
+    </div>
+  </section>
+
+  <!-- Popular Channels Section -->
+  <section class="px-4 py-6">
+    <h3 class="text-lg font-bold text-center">LIVE CHANNELS</h3>
+    <div class="w-20 h-1 bg-red-600 mx-auto mt-1 mb-4"></div>
+
+    <!-- Channel Icons Grid -->
+    <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 justify-items-center">
+      
+      <!-- Channel 1 -->
+      <a href="player.html?channel=Channel+1&video=https://example.com/channel1.m3u8">
+        <img 
+          src="https://fredflix.fun/assets/images/67ea1d4c2c21f_20240801_205923.png" 
+          alt="Channel 1" 
+          class="rounded-full border-4 border-red-600 w-[80px]" 
+        />
+      </a>
+
+      <!-- Channel 2 -->
+      <a href="player.html?channel=Channel+2&video=https://example.com/channel2.m3u8">
+        <img 
+          src="https://fredflix.fun/assets/images/67ea26577175a_20250331_111646.png" 
+          alt="Channel 2" 
+          class="rounded-full border-4 border-red-600 w-[80px]" 
+        />
+      </a>
+
+      <!-- Channel 3 -->
+      <a href="player.html?channel=Channel+3&video=https://example.com/channel3.m3u8">
+        <img 
+          src="https://fredflix.fun/assets/images/67e641155fab3_Masranga1667751530.png" 
+          alt="Channel 3" 
+          class="rounded-full border-4 border-red-600 w-[80px]" 
+        />
+      </a>
+
+      <!-- Channel 4 -->
+      <a href="player.html?channel=Channel+4&video=https://example.com/channel4.m3u8">
+        <img 
+          src="https://fredflix.fun/assets/images/67ea1d9cca754_20240721_152924.png" 
+          alt="Channel 4" 
+          class="rounded-full border-4 border-red-600 w-[80px]" 
+        />
+      </a>
+
+      <!-- Channel 5 -->
+      <a href="player.html?channel=Channel+5&video=https://example.com/channel5.m3u8">
+        <img 
+          src="https://fredflix.fun/assets/images/67ea1d81542b2_20240801_210529.png" 
+          alt="Channel 5" 
+          class="rounded-full border-4 border-red-600 w-[80px]" 
+        />
+      </a>
+
+      <!-- Channel 6 -->
+      <a href="player.html?channel=Channel+6&video=https://example.com/channel6.m3u8">
+        <img 
+          src="https://fredflix.fun/assets/images/67e642e21d148_Channel%20i1664976520.png" 
+          alt="Channel 6" 
+          class="rounded-full border-4 border-red-600 w-[80px]" 
+        />
+      </a>
+
+    </div>
+  </section>
+
+</body>
+  </html>
