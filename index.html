@@ -13,6 +13,13 @@
 </head>
 <body class="bg-black text-white">
 
+  <!-- Loading Screen -->
+  <div id="loader" class="fixed inset-0 flex items-center justify-center bg-black z-[99999]">
+    <div class="text-center">
+      <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-red-600 border-solid mx-auto mb-4"></div>
+      <p class="text-white text-lg font-semibold">Loading TiSPORTS...</p>
+    </div>
+  </div>
   <!-- Header Section -->
   <header class="text-center py-4">
     <h1 class="text-xl font-bold">TiSPORTS - WATCH FREE LIVE</h1>
@@ -141,6 +148,56 @@
 
     </div>
   </section>
+<!-- Hitwebcounter Styled Version START -->
+<div class="counter-container" id="visitorCounter" style="position: fixed; bottom: 20px; right: 20px; text-align: center; background-color: rgba(0, 0, 0, 0.7); padding: 15px 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); z-index: 9999; display: flex; flex-direction: column; align-items: center;">
+  <p style="font-size: 18px; font-family: 'Roboto', sans-serif; color: #ffffff; font-weight: bold; margin-bottom: 10px;">𝗧𝗼𝘁𝗮𝗹 𝗩𝗶𝘀𝗶𝘁𝗼𝗿</p>
+  <a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=20197042&style=0001&nbdigits=5&type=page&initCount=0" 
+         title="Counter Widget" 
+         alt="Visit counter For Websites" 
+         border="0" 
+         style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); max-width: 150px;" />
+  </a>
+</div>
+<!-- Hitwebcounter Styled Version END -->
 
+<style>
+  #visitorCounter {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  #visitorCounter.hidden {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  /* Hiding the counter after 3 seconds */
+  setTimeout(() => {
+    document.getElementById("visitorCounter").classList.add("hidden");
+  }, 3000);
+</style>
+
+<script>
+  // Show counter when clicking anywhere on the screen
+  document.body.addEventListener("click", () => {
+    const counter = document.getElementById("visitorCounter");
+    counter.classList.remove("hidden");
+
+    // Hide counter again after 3 seconds
+    setTimeout(() => {
+      counter.classList.add("hidden");
+    }, 3000);
+  });
+
+  // Hide loader when everything has loaded
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    loader.style.transition = 'opacity 0.5s ease';
+    loader.style.opacity = '0';
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 500);
+  });
+</script>
 </body>
 </html>
